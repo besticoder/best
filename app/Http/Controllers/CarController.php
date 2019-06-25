@@ -114,11 +114,20 @@ class CarController extends HomeController
 
     public function deleteCars(Request $request)
     {
-        $car = Car::where('id',$request->id)->count();
-        if($car == 0)
+        $car = Car::where('id',$request->id)->first();
+        if(empty($car))
         {
             echo json_encode(false);
         }
+
+        if($car->car_img != '')
+        {
+            $path = '/upload/car/'.$car->car_img;
+            if(File::exists(public_path($path))){
+                File::delete(public_path($path));
+            }
+        }
+
         $this->car->deleteData($request->id);
         echo json_encode(true);
     }

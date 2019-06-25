@@ -11,47 +11,43 @@
     <li class="breadcrumb-item">
       <a href="{{route('home')}}">Dashboard</a>
     </li>
-    <li class="breadcrumb-item active">Cars</li>
+    <li class="breadcrumb-item active">Inventory</li>
   </ol>
 
   <!-- DataTables Example -->
-  <div class="card mb-3 addCar" style="display: none;">
+  <div class="card mb-3 addInv" style="display: none;">
     <div class="card-header">
-      <i class="fas fa-table"></i>Add Car
-      <button class="float-right listCarBTN btn btn-warning">Car List</button>
+      <i class="fas fa-table"></i>Add Inventory
+      <button class="float-right listInvBTN btn btn-warning">Inventory List</button>
     </div>
     <div class="card-body">
-      {{ Form::open(array('id' => 'addCarForm','enctype' => 'multipart/form-data')) }}
+      {{ Form::open(array('id' => 'addInvForm','enctype' => 'multipart/form-data')) }}
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              {{ Form::label('email', 'Car Name') }}
-              {{Form::text('car_name', $value = null, $attributes = array('class' => 'form-control','required'))}}
+              {{ Form::label('email', 'Product Name') }}
+              {{Form::text('pro_name', $value = null, $attributes = array('class' => 'form-control','required'))}}
             </div>
             <div class="form-group">
-              {{ Form::label('type', 'Car Type') }}
-              {{Form::text('car_type', $value = null, $attributes = array('class' => 'form-control','required'))}}
+              {{ Form::label('type', 'Product Type') }}
+              {{Form::text('pro_price', $value = null, $attributes = array('class' => 'form-control','required'))}}
             </div>
             <div class="form-group">
-              {{ Form::label('email', 'Car Model No') }}
-              {{Form::text('car_model_no', $value = null, $attributes = array('class' => 'form-control', 'required'))}}
+              {{ Form::label('email', 'Product Model No') }}
+              {{Form::text('pro_stok', $value = null, $attributes = array('class' => 'form-control', 'required'))}}
             </div>
           </div>
           <div class="col-md-6">
             {{ Form::label('email', 'Image') }}
             <div class="input-group mb-3">
               <div class="custom-file">
-                {{Form::file('car_img', $attributes = array('class' => 'custom-file-input','id' => 'inputGroupFile02', 'required'))}}
+                {{Form::file('pro_img', $attributes = array('class' => 'custom-file-input','id' => 'inputGroupFile02', 'required'))}}
                 {{ Form::label('Choose file', 'Car Image',$attributes = array('class' => 'custom-file-label','for' => 'inputGroupFile02')) }}
               </div>
             </div>
             <div class="form-group">
-              {{ Form::label('email', 'Car Color') }}
-              {{Form::text('car_color', $value = null, $attributes = array('class' => 'form-control', 'required'))}}
-            </div>
-            <div class="form-group">
-              {{ Form::label('email', 'Car Company') }}
-              {{Form::text('car_company', $value = null, $attributes = array('class' => 'form-control', 'required'))}}
+              {{ Form::label('email', 'Product Color') }}
+              {{Form::text('pro_item', $value = null, $attributes = array('class' => 'form-control', 'required'))}}
             </div>
           </div>
         </div>
@@ -62,59 +58,55 @@
 
 
   <!-- DataTables Example -->
-  <div class="card mb-3 editCar" style="display: none;">
+  <div class="card mb-3 editInv" style="display: none;">
     <div class="card-header">
-      <i class="fas fa-table"></i>Add Car
-      <button class="float-right listCarBTN btn btn-warning">Car List</button>
+      <i class="fas fa-table"></i>Add Inventory
+      <button class="float-right listInvBTN btn btn-warning">Inventory List</button>
     </div>
     <div class="card-body">
-      {{ Form::open(array('id' => 'editCarForm','enctype' => 'multipart/form-data')) }}
+      {{ Form::open(array('id' => 'editInvForm','enctype' => 'multipart/form-data')) }}
         <div class="row">
           <div class="col-md-5">
             <div class="form-group">
               {{ Form::label('email', 'Car Name') }}
-              {{Form::text('car_name', $value = null, $attributes = array('class' => 'form-control car_name', 'required'))}}
+              {{Form::text('pro_name', $value = null, $attributes = array('class' => 'form-control pro_name', 'required'))}}
             </div>
             <div class="form-group">
               {{ Form::label('type', 'Car Type') }}
-              {{Form::text('car_type', $value = null, $attributes = array('class' => 'form-control car_type', 'required'))}}
+              {{Form::text('pro_price', $value = null, $attributes = array('class' => 'form-control pro_price', 'required'))}}
             </div>
             <div class="form-group">
               {{ Form::label('email', 'Car Model No') }}
-              {{Form::text('car_model_no', $value = null, $attributes = array('class' => 'form-control car_model_no', 'required'))}}
+              {{Form::text('pro_stok', $value = null, $attributes = array('class' => 'form-control pro_stok', 'required'))}}
             </div>
           </div>
           <div class="col-md-5">
             {{ Form::label('email', 'Image') }}
             <div class="input-group mb-3">
               <div class="custom-file">
-                {{Form::file('car_img', $attributes = array('class' => 'custom-file-input','id' => 'inputGroupFile02'))}}
+                {{Form::file('pro_img', $attributes = array('class' => 'custom-file-input','id' => 'inputGroupFile02'))}}
                 {{ Form::label('Choose file', 'Car Image',$attributes = array('class' => 'custom-file-label','for' => 'inputGroupFile02')) }}
               </div>
             </div>
             <div class="form-group">
               {{ Form::label('email', 'Car Color') }}
-              {{Form::text('car_color', $value = null, $attributes = array('class' => 'form-control car_color', 'required'))}}
-            </div>
-            <div class="form-group">
-              {{ Form::label('email', 'Car Company') }}
-              {{Form::text('car_company', $value = null, $attributes = array('class' => 'form-control car_company', 'required'))}}
+              {{Form::text('pro_item', $value = null, $attributes = array('class' => 'form-control pro_item', 'required'))}}
             </div>
           </div>
           <div class="col-md-2 show_img">
 
           </div>
         </div>
-          <input type="hidden" class="car_id" name="id">
+          <input type="hidden" class="pro_id" name="id">
           {{Form::submit('Edit',$attributes = array('class' => 'btn btn-success float-right'))}}
       {{ Form::close() }}
     </div>
   </div>
 
-  <div class="card mb-3 listCar">
+  <div class="card mb-3 listInv">
     <div class="card-header">
-      <i class="fas fa-table"></i>Car List
-      <button class="float-right addCarBTN btn btn-warning">Add New Car</button>
+      <i class="fas fa-table"></i>Inventory List
+      <button class="float-right addInvBTN btn btn-warning">Add New Inventory</button>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -124,10 +116,9 @@
               <th width="5%" data-hide="phone">ID</th>
               <th width="50px" data-class="expand"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i>Image</th>
               <th data-class="expand"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i>Name</th>
-              <th data-class="expand"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i>Type</th>
-              <th data-hide="phone"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Model No</th>
-              <th data-hide="phone"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Color</th>
-              <th data-hide="phone,tablet"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Company</th>
+              <th data-class="expand"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i>Price</th>
+              <th data-hide="phone"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Stok</th>
+              <th data-hide="phone"><i class="fa fa-fw fa-link text-muted hidden-md hidden-sm hidden-xs"></i> Item</th>
               <th width="100px" data-hide="phone,tablet"><i class="fa fa-fw fa-cog txt-color-blue hidden-md hidden-sm hidden-xs"></i> Action</th>
             </tr>
           </thead>
@@ -164,19 +155,18 @@
       "processing": true,
       "serverSide": true,
       "ajax":{
-                   "url": '{!!route('getCars')!!}',
+                   "url": '{!!route('get_inventory')!!}',
                    "dataType": "json",
                    "type": "POST",
                    "data":{_token: "{{csrf_token()}}"}
                  },
           "columns": [
               { "data": "id" },
-              { "data": "car_img" },
-              { "data": "car_name" },
-              { "data": "car_type" },
-              { "data": "car_model_no" },
-              { "data": "car_color" },
-              { "data": "car_company" },
+              { "data": "pro_img" },
+              { "data": "pro_name" },
+              { "data": "pro_price" },
+              { "data": "pro_stok" },
+              { "data": "pro_item" },
               { "data": "action" },
           ],
           responsive: true,
@@ -184,40 +174,39 @@
     });
   }
 
-  $("body").on("click", ".listCarBTN", function(event){
-    $('.addCar').hide();
-    $('.editCar').hide();
-    $('.listCar').slideDown("slow");
+  $("body").on("click", ".listInvBTN", function(event){
+    $('.addInv').hide();
+    $('.editInv').hide();
+    $('.listInv').slideDown("slow");
   });
 
-  $("body").on("click", ".addCarBTN", function(event){
+  $("body").on("click", ".addInvBTN", function(event){
     $('input').val('');
-    $('.listCar').hide();
-    $('.addCar').slideDown("slow");
+    $('.listInv').hide();
+    $('.addInv').slideDown("slow");
   }); 
 
-  $("body").on("click", ".editCarBTN", function(event){
-    $('.listCar').hide();
-    $('.editCar').slideDown("slow");
+  $("body").on("click", ".editInvBTN", function(event){
+    $('.listInv').hide();
+    $('.editInv').slideDown("slow");
 
     var id = $(this).attr('data-id');
     $.ajax({
       type: "POST",
-      url: '{!!route('showCars')!!}',
+      url: '{!!route('show_inventory')!!}',
       data: {id:id},
       dataType: "json",
       success: function( data ) {
         if(data)
         {
-          $('.car_name').val(data.car_name);
-          $('.car_type').val(data.car_type);
-          $('.car_model_no').val(data.car_model_no);
-          $('.car_color').val(data.car_color);
-          $('.car_company').val(data.car_company);
-          $('.car_id').val(data.id);
-          if(data.car_img != '')
+          $('.pro_name').val(data.pro_name);
+          $('.pro_price').val(data.pro_price);
+          $('.pro_stok').val(data.pro_stok);
+          $('.pro_item').val(data.pro_item);
+          $('.pro_id').val(data.id);
+          if(data.pro_img != '')
           {
-            $('.show_img').html('<img src="{!!asset('public/upload/car/') !!}/'+data.car_img+'" height="250px" width="100%">');
+            $('.show_img').html('<img src="{!!asset('public/upload/product/') !!}/'+data.pro_img+'" height="250px" width="100%">');
           }
           else
           {
@@ -232,12 +221,12 @@
 
   }); 
 
-  $("body").on("submit", "#addCarForm", function(event){
+  $("body").on("submit", "#addInvForm", function(event){
     event.preventDefault();
 
     $.ajax({
           type: "POST",
-          url: '{!!route('addCars')!!}',
+          url: '{!!route('add_inventory')!!}',
           data: new FormData(this),
           dataType:'JSON',
           contentType: false,
@@ -248,9 +237,9 @@
             { 
               Swal.fire('Record added successfuly!');
               getAllData();
-              $('.addCar').hide();
-              $('.editCar').hide();
-              $('.listCar').slideDown("slow");
+              $('.addInv').hide();
+              $('.editInv').hide();
+              $('.listInv').slideDown("slow");
             }
             else
             {
@@ -260,12 +249,12 @@
 
   });
 
-  $("body").on("submit", "#editCarForm", function(event){
+  $("body").on("submit", "#editInvForm", function(event){
     event.preventDefault();
     
     $.ajax({
           type: "POST",
-          url: '{!!route('updateCar')!!}',
+          url: '{!!route('update_inventory')!!}',
           data: new FormData(this),
           dataType: "json",
           contentType: false,
@@ -276,9 +265,9 @@
             { 
               Swal.fire('Record updated successfuly!');
               getAllData();
-              $('.addCar').hide();
-              $('.editCar').hide();
-              $('.listCar').slideDown("slow");
+              $('.addInv').hide();
+              $('.editInv').hide();
+              $('.listInv').slideDown("slow");
             }
             else
             {
@@ -288,7 +277,7 @@
 
   });
 
-  $("body").on("click", ".delete_car", function(event){
+  $("body").on("click", ".delete_inv", function(event){
     var id = $(this).attr('data-id');
     Swal.fire({
       title: 'Are you sure?',
@@ -302,7 +291,7 @@
           $(this).closest("tr").remove();
           $.ajax({
             type: "POST",
-            url: '{!!route('deleteCars')!!}',
+            url: '{!!route('delete_inventory')!!}',
             data: {id:id},
             dataType: "json",
             success: function( data ) {
