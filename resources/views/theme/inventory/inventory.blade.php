@@ -206,7 +206,7 @@
           $('.pro_id').val(data.id);
           if(data.pro_img != '')
           {
-            $('.show_img').html('<img src="{!!asset('public/upload/product/') !!}/'+data.pro_img+'" height="250px" width="100%">');
+            $('.show_img').html('<img src="{!!asset('upload/product/') !!}/'+data.pro_img+'" height="250px" width="100%">');
           }
           else
           {

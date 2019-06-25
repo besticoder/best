@@ -83,11 +83,11 @@ class Inventory extends Model
                 $nestedData['id'] = $post->id;
                 if($post->pro_img == '')
                 {
-                    $nestedData['pro_img'] = '<img src="'.asset('public/theme/img/inventory.jpeg').'" width="50px">';
+                    $nestedData['pro_img'] = '<img src="'.asset('theme/img/inventory.jpeg').'" width="50px">';
                 }
                 else
                 {
-                    $nestedData['pro_img'] = '<img src="'.asset('public/upload/product/').'/'.$post->pro_img.'" width="50px">';
+                    $nestedData['pro_img'] = '<img src="'.asset('upload/product/').'/'.$post->pro_img.'" width="50px">';
                 }
                 $nestedData['pro_name'] = $post->pro_name;
                 $nestedData['pro_price'] = $post->pro_price;

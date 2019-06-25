@@ -13,15 +13,15 @@
   <title>Dashboard</title>
 
   <!-- Custom fonts for this template-->
-  <link href="{{asset('public/theme/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{asset('theme/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
   <!-- Page level plugin CSS-->
-  <link href="{{asset('public/theme/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
+  <link href="{{asset('theme/vendor/datatables/dataTables.bootstrap4.css') }}" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="{{asset('public/theme/css/sb-admin.css') }}" rel="stylesheet">
+  <link href="{{asset('theme/css/sb-admin.css') }}" rel="stylesheet">
   @yield('style')
-  <script src="{{asset('public/theme/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/jquery/jquery.min.js') }}"></script>
 </head>
 
 <body id="page-top">
@@ -76,20 +76,20 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="{{asset('public/theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="{{asset('public/theme/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="{{asset('public/theme/vendor/chart.js/Chart.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/chart.js/Chart.min.js') }}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="{{asset('public/theme/js/sb-admin.min.js') }}"></script>
+  <script src="{{asset('theme/js/sb-admin.min.js') }}"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="{{asset('public/theme/js/demo/datatables-demo.js') }}"></script>
-  <script src="{{asset('public/theme/js/demo/chart-area-demo.js') }}"></script>
+  <script src="{{asset('theme/js/demo/datatables-demo.js') }}"></script>
+  <script src="{{asset('theme/js/demo/chart-area-demo.js') }}"></script>
   <script type="text/javascript">
     $.ajaxSetup({
        headers: {

@@ -86,11 +86,11 @@ class CellPhone extends Model
                 $nestedData['id'] = $post->id;
                 if($post->cp_img == '')
                 {
-                    $nestedData['cp_img'] = '<img src="'.asset('public/theme/img/phone.jpg').'" width="50px">';
+                    $nestedData['cp_img'] = '<img src="'.asset('theme/img/phone.jpg').'" width="50px">';
                 }
                 else
                 {
-                    $nestedData['cp_img'] = '<img src="'.asset('public/upload/phone/').'/'.$post->cp_img.'" width="50px">';
+                    $nestedData['cp_img'] = '<img src="'.asset('upload/phone/').'/'.$post->cp_img.'" width="50px">';
                 }
                 $nestedData['cp_name'] = $post->cp_name;
                 $nestedData['cp_color'] = $post->cp_color;

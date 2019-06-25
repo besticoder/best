@@ -217,7 +217,7 @@
           $('.car_id').val(data.id);
           if(data.car_img != '')
           {
-            $('.show_img').html('<img src="{!!asset('public/upload/car/') !!}/'+data.car_img+'" height="250px" width="100%">');
+            $('.show_img').html('<img src="{!!asset('upload/car/') !!}/'+data.car_img+'" height="250px" width="100%">');
           }
           else
           {

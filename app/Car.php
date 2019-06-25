@@ -86,11 +86,11 @@ class Car extends Model
                 $nestedData['id'] = $post->id;
                 if($post->car_img == '')
                 {
-                    $nestedData['car_img'] = '<img src="'.asset('public/theme/img/car.jpg').'" width="50px">';
+                    $nestedData['car_img'] = '<img src="'.asset('theme/img/car.jpg').'" width="50px">';
                 }
                 else
                 {
-                    $nestedData['car_img'] = '<img src="'.asset('public/upload/car/').'/'.$post->car_img.'" width="50px">';
+                    $nestedData['car_img'] = '<img src="'.asset('upload/car/').'/'.$post->car_img.'" width="50px">';
                 }
                 $nestedData['car_name'] = $post->car_name;
                 $nestedData['car_type'] = $post->car_type;

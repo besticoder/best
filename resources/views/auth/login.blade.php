@@ -12,10 +12,10 @@
   <title>Login</title>
 
   <!-- Custom fonts for this template-->
-  <link href="{{asset('public/theme/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{asset('theme/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
-  <link href="{{asset('public/theme/css/sb-admin.css') }}" rel="stylesheet">
+  <link href="{{asset('theme/css/sb-admin.css') }}" rel="stylesheet">
   <style type="text/css">.err{color: red}</style>
 </head>
 
@@ -74,11 +74,11 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="{{asset('public/theme/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{asset('public/theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="{{asset('public/theme/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+  <script src="{{asset('theme/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 </body>
 
 </html>

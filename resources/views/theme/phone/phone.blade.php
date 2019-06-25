@@ -218,7 +218,7 @@
           $('.phone_id').val(data.id);
           if(data.cp_img != '')
           {
-            $('.show_img').html('<img src="{!!asset('public/upload/phone/') !!}/'+data.cp_img+'" height="250px" width="100%">');
+            $('.show_img').html('<img src="{!!asset('upload/phone/') !!}/'+data.cp_img+'" height="250px" width="100%">');
           }
           else
           {
